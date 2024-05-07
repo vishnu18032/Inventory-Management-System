@@ -34,10 +34,11 @@ jobs:
      # run: test -f package.json
     - name: Navigate to Frontend Directory
       run: cd AirbusInventory
-
-
+      
     - name: Build Angular App
       run: npm run build
+      working-directory: AirbusInventory
+
 
   backend:
     name: Backend CI/CD
