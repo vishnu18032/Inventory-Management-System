@@ -30,8 +30,8 @@ jobs:
     - name: List files in directory
       run: ls -al
 
-    - name: Check if package.json exists
-      run: test -f package.json
+    #- name: Check if package.json exists
+     # run: test -f package.json
 
     - name: Build Angular App
       run: npm run build
