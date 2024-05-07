@@ -20,10 +20,15 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '14' # Set an initial version to ensure NVM is installed
 
-    - name: Install Angular CLI
-      run: npm install -g @angular/cli
+    - name: Install NVM
+      run: |
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+        source ~/.bashrc
+
+    - name: Use Node.js version 18.13
+      run: nvm install 18.13 && nvm use 18.13
 
     - name: Install Frontend Dependencies
       run: npm install
