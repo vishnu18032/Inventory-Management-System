@@ -27,14 +27,10 @@ jobs:
 
     - name: Print current directory
       run: pwd
+
     - name: List files in directory
       run: ls -al
 
-    #- name: Check if package.json exists
-     # run: test -f package.json
-    - name: Navigate to Frontend Directory
-      run: cd AirbusInventory
-      
     - name: Build Angular App
       run: npm run build
       working-directory: AirbusInventory
