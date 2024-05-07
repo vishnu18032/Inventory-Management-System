@@ -25,6 +25,11 @@ jobs:
     - name: Install Frontend Dependencies
       run: npm install
 
+    - name: Print current directory
+      run: pwd
+    - name: List files in directory
+      run: ls -al
+
     - name: Check if package.json exists
       run: test -f package.json
 
